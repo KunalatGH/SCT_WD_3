@@ -1,16 +1,61 @@
-# React + Vite
+# Quiz Game Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple interactive multiple-choice quiz game built with **React**, **Vite**, and **TailwindCSS**. This is a frontend-only project designed for desktop/laptop view, featuring instant feedback, a progress bar, and summary results.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Single-select, multi-select, and fill-in-the-blank questions
+- Visual progress bar
+- Instant answer feedback (correct/incorrect)
+- End-of-quiz stats: score, correct, incorrect, review per question
+- Restart option
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+quiz-game/
+├── public/
+│ └── index.html
+├── src/
+│ ├── components/
+│ │ ├── Quiz.jsx
+│ │ ├── Question.jsx
+│ │ └── Result.jsx
+│ ├── assets/
+│ │ └── data/
+│ │ └── questions.js
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### 1. Clone the repository
+git clone https://github.com/yourusername/quiz-game.git
+cd quiz-game
+
+### 2. Install dependencies
+
+npm install
+
+### 3. Run the app in development
+
+npm run dev
+
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the app.
+
+## Customization
+
+- Add or edit questions in `src/assets/data/questions.js`
+- Adjust styling with Tailwind classes in the components or `index.css`
+- All logic is in the `src/components` folder for easy changes
+
+## Build for Production
+
+npm run build
+
+## License
+MIT
